@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Form Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row aryfunction">
+            <div class="col-sm-4">
+                <form action="#" name="form">
+                    <div class="form-group" id="group1">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" onblur="validateun();">
+                        <span id="erruname" class="control-label dangercolor"></span>
+                    </div>
+                    <div class="form-group" id="group2">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" onblur="validatepass()">
+                        <span id="errpass" class="control-label dangercolor"></span>
+                    </div>
+                    <div class="form-group" id="group3">
+                        <label for="con-pass">Confirm Password</label>
+                        <input type="password" name="repassword" class="form-control" id="repassword" onblur="validaterepass()">
+                        <span id="errrepass" class="control-label dangercolor"></span>
+                    </div>
+                    <div class="form-group" id="group4">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" class="form-control" id="fname" onblur="validatefn()">
+                        <span id="errfname" class="control-label dangercolor"></span>
+                    </div>
+                    <div class="form-group" id="group5">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" class="form-control" id="lname" onblur="validateln()">
+                        <span id="errlname" class="control-label dangercolor"></span>
+                    </div>
+                    <div class="form-group" id="group6">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" class="form-control" id="email" onblur="validateemail()">
+                        <span id="errmail" class="control-label dangercolor"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateun() {
+
+            var un = document.form.username.value;
+
+            if (un == null || un == "") {
+                document.getElementById("erruname").innerHTML = "The Username field is required";
+
+
+            } else document.getElementById("erruname").innerHTML = "";
+
+            var inputVal = document.getElementById("username");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+
+
+
+
+        }
+
+        function validatepass() {
+
+
+            var pas = document.form.password.value;
+
+            if (pas == null || pas == "") {
+                document.getElementById("errpass").innerHTML = "The Password field is required";
+            } else document.getElementById("errpass").innerHTML = "";
+            
+            var inputVal = document.getElementById("password");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+
+        function validaterepass() {
+            //var username = document.form.username.value;
+
+            var repas = document.form.repassword.value;
+
+            if (repas == null || repas == "") {
+                document.getElementById("errrepass").innerHTML = "The ConfirmPassword field is required";
+            } else document.getElementById("errrepass").innerHTML = "";
+            var inputVal = document.getElementById("repassword");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+
+        function validatefn() {
+
+
+            var fn = document.form.fname.value;
+
+            if (fn == null || fn == "") {
+                document.getElementById("errfname").innerHTML = "The FirstName field is required";
+            } else document.getElementById("errfname").innerHTML = "";
+            var inputVal = document.getElementById("fname");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+
+        function validateln() {
+
+
+            var ln = document.form.lname.value;
+
+            if (ln == null || ln == "") {
+                document.getElementById("errlname").innerHTML = "The LastName field is required";
+            } else document.getElementById("errlname").innerHTML = "";
+            var inputVal = document.getElementById("lname");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+
+        function validateemail() {
+
+
+            var ln = document.form.mail.value;
+
+            if (ln == null || ln == "") {
+                document.getElementById("errmail").innerHTML = "The Email field is required";
+            } else document.getElementById("errmail").innerHTML = "";
+            var inputVal = document.getElementById("email");
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "#FFEEEC";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
