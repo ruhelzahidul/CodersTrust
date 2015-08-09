@@ -22,7 +22,7 @@
             background: #9dd2ea;
             background: linear-gradient(#9dd2ea, #8bceec);
             border-radius: 3px;
-            box-shadow: 0 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px #009de4, 0 10px 15px rgba(0, 0, 0, 0.2);
         }
 .code{ font-family: Courier New;}
 .dangercolor{color: brown;}
